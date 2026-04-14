@@ -51,7 +51,7 @@
             .page {
                 max-width: 210mm;
                 min-height: 297mm;
-                margin: 20px auto;
+                margin: 20px auto 20px 300px;
                 padding: 25mm 20mm 30mm 25mm;
                 background: var(--color-bg-page);
                 box-shadow: 0 4px 30px rgba(0,0,0,0.1);
@@ -236,27 +236,68 @@
 
         @media (max-width: 1200px) {
             .sidebar { display: none; }
-            .page { margin-left: auto !important; margin-right: auto !important; }
-            .author-brand { 
-                position: absolute; /* Place on top of cover area on scroll instead of fixed? */
-                top: 20px;
-                right: 20px;
+            .page {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                max-width: 800px;
+            }
+            .author-brand {
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                padding: 6px 12px;
+                font-size: 9pt;
             }
         }
 
         @media (max-width: 800px) {
             .page {
-                width: 100%;
-                max-width: 100%;
-                margin: 0;
-                padding: 15mm 10mm 25mm 10mm;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 20px 16px 80px 16px !important;
+                min-height: auto !important;
                 box-shadow: none;
             }
             .bottom-nav { display: flex; }
-            .page-header { left: 10mm; right: 10mm; }
-            .page-footer { left: 10mm; right: 10mm; bottom: 15mm; }
-            .cover-page { padding: 30mm 10mm !important; }
-            .cover-title { font-size: 28pt; }
+            .page-header {
+                position: relative;
+                top: auto;
+                left: auto;
+                right: auto;
+                margin-bottom: 10px;
+            }
+            .page-footer {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                right: auto;
+                margin-top: 20px;
+            }
+            .cover-page {
+                padding: 40px 16px !important;
+                min-height: 80vh !important;
+            }
+            .cover-title { font-size: 24pt; }
+            .cover-subtitle { font-size: 12pt; max-width: 100%; }
+            h1 { font-size: 18pt; margin-top: 10mm; }
+            h2 { font-size: 13pt; }
+            body { font-size: 10pt; }
+            .formula-box { padding: 12px; margin: 12px 0; }
+            .rac-section { padding: 12px; margin-top: 20px; }
+            .italic-summary { padding: 12px; }
+            table { font-size: 8pt; }
+            th, td { padding: 6px 8px; }
+            .author-brand {
+                position: fixed;
+                top: auto;
+                bottom: 60px;
+                right: 10px;
+                padding: 5px 10px;
+                font-size: 8pt;
+            }
         }
 
         /* ============================================
@@ -531,7 +572,7 @@
          COVER PAGE
          ============================================ -->
     <section id="cover">
-    <div class="page cover-page" style="margin-left: 300px;">
+    <div class="page cover-page">
         <div class="brand">Minh Đỗ</div>
         <h1 class="cover-title">F&B Competitive Analysis</h1>
         <p class="cover-subtitle">Hướng dẫn toàn diện về phân tích đối thủ cạnh tranh cho thị trường F&B Việt Nam năm 2026</p>
@@ -547,7 +588,7 @@
          MỤC LỤC
          ============================================ -->
     <section id="toc">
-    <div class="page" style="margin-left: 300px;">
+    <div class="page">
         <div class="page-header">
             <span>F&B Competitive Analysis</span>
             <span>Mục lục</span>
@@ -577,7 +618,7 @@
          LỜI MỞ ĐẦU
          ============================================ -->
     <section id="intro">
-    <div class="page chapter-page" style="margin-left: 300px;">
+    <div class="page chapter-page">
         <div class="page-header">
             <span>F&B Competitive Analysis</span>
             <span>Lời mở đầu</span>
@@ -607,7 +648,7 @@
          CHƯƠNG I
          ============================================ -->
     <section id="chapter-1">
-    <div class="page chapter-page" style="margin-left: 300px;">
+    <div class="page chapter-page">
         <div class="page-header">
             <span>F&B Competitive Analysis</span>
             <span>Chương I</span>
@@ -652,7 +693,7 @@
          CHƯƠNG II
          ============================================ -->
     <section id="chapter-2">
-    <div class="page chapter-page" style="margin-left: 300px;">
+    <div class="page chapter-page">
         <div class="page-header">
             <span>F&B Competitive Analysis</span>
             <span>Chương II</span>
@@ -707,7 +748,7 @@
          CHƯƠNG III
          ============================================ -->
     <section id="chapter-3">
-    <div class="page chapter-page" style="margin-left: 300px;">
+    <div class="page chapter-page">
         <div class="page-header">
             <span>F&B Competitive Analysis</span>
             <span>Chương III</span>
@@ -749,7 +790,7 @@
          CHƯƠNG IV
          ============================================ -->
     <section id="chapter-4">
-    <div class="page chapter-page" style="margin-left: 300px;">
+    <div class="page chapter-page">
         <div class="page-header">
             <span>F&B Competitive Analysis</span>
             <span>Chương IV</span>
@@ -783,7 +824,7 @@
          CHƯƠNG V
          ============================================ -->
     <section id="chapter-5">
-    <div class="page chapter-page" style="margin-left: 300px;">
+    <div class="page chapter-page">
         <div class="page-header">
             <span>F&B Competitive Analysis</span>
             <span>Chương V</span>
@@ -815,7 +856,7 @@
          CHƯƠNG VI - VIII
          ============================================ -->
     <section id="chapter-6">
-    <div class="page chapter-page" style="margin-left: 300px;">
+    <div class="page chapter-page">
         <div class="page-header">
             <span>F&B Competitive Analysis</span>
             <span>Chương VI</span>
@@ -832,7 +873,7 @@
     </section>
 
     <section id="chapter-7">
-    <div class="page chapter-page" style="margin-left: 300px;">
+    <div class="page chapter-page">
         <div class="page-header">
             <span>F&B Competitive Analysis</span>
             <span>Chương VII</span>
@@ -848,7 +889,7 @@
     </section>
 
     <section id="chapter-8">
-    <div class="page chapter-page" style="margin-left: 300px;">
+    <div class="page chapter-page">
         <div class="page-header">
             <span>F&B Competitive Analysis</span>
             <span>Chương VIII</span>
@@ -880,7 +921,7 @@
          PHỤ LỤC
          ============================================ -->
     <section id="appendix">
-    <div class="page chapter-page" style="margin-left: 300px;">
+    <div class="page chapter-page">
         <div class="page-header">
             <span>F&B Competitive Analysis</span>
             <span>Phụ lục</span>
